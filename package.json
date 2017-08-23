@@ -1,0 +1,13 @@
+{
+	"name"         : "arping",
+	"version"      : "0.0.0",
+	"description"  : "ARP ping using raw sockets",
+	"main"         : "index.js",
+	"keywords"     : [ "arp", "ping" ],
+	"author"       : "Diogo Resende <dresende@thinkdigital.pt>",
+	"repository"   : "git@github.com:dresende/node-arping.git",
+	"license"      : "MIT",
+	"dependencies" : {
+		"pcap2" : "^3.0.4"
+	}
+}
