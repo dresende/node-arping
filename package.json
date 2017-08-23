@@ -1,6 +1,6 @@
 {
 	"name"         : "arping",
-	"version"      : "0.0.0",
+	"version"      : "0.0.1",
 	"description"  : "ARP ping using raw sockets",
 	"main"         : "index.js",
 	"keywords"     : [ "arp", "ping" ],
