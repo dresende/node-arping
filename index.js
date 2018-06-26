@@ -164,8 +164,8 @@ function try_ping(ip_address, packet, options, next) {
 	});
 
 	session.on("end", function(session) {
-    session.close();
-    session = null;
+		session.close();
+		session = null;
 	});
 
 	session.inject(packet);
