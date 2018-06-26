@@ -161,6 +161,8 @@ function try_ping(ip_address, packet, options, next) {
 			elapsed : time[0] + time[1] / NS_PER_SEC,
 			tha     : packet.payload.payload.target_ha.toString(),
 			sha     : packet.payload.payload.sender_ha.toString(),
+			tip     : packet.payload.payload.target_pa.toString(),
+			sip     : packet.payload.payload.sender_pa.toString(),
 		});
 	});
 
