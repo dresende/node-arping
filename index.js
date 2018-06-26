@@ -157,9 +157,6 @@ function try_ping(ip_address, packet, options, next) {
 
 		time = process.hrtime(time);
 
-		session.close();
-		session = null;
-
 		return done(null, {
 			elapsed : time[0] + time[1] / NS_PER_SEC,
 			tha     : packet.payload.payload.target_ha.toString(),
@@ -167,6 +164,11 @@ function try_ping(ip_address, packet, options, next) {
 			tip     : packet.payload.payload.target_pa.toString(),
 			sip     : packet.payload.payload.sender_pa.toString(),
 		});
+	});
+
+	session.on("end", function(session) {
+		session.close();
+		session = null;
 	});
 
 	session.inject(packet);
