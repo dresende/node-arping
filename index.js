@@ -141,7 +141,7 @@ function try_ping(ip_address, packet, options, next) {
 
 			if (options.tries <= 0) return next(err);
 
-			return try_ping(packet, options, next);
+			return try_ping(ip_address, packet, options, next);
 		}
 
 		return next(null, info);
