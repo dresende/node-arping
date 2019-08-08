@@ -2,7 +2,7 @@ const NS_PER_SEC = Math.pow(10, 9);
 
 const os         = require("os");
 const raw        = require("raw-socket");
-const pcap       = require("pcap2");
+const pcap       = require("pcap");
 const types      = require("./types");
 
 exports.ping = (...args) => {
@@ -147,7 +147,7 @@ function try_ping(ip_address, packet, options, next) {
 		return next(null, info);
 	};
 
-	let session = new pcap.Session("", { filter : "arp" });
+	let session = pcap.createSession("", "arp");
 	let time    = process.hrtime();
 
 	session.on("packet", (raw) => {
