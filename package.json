@@ -1,6 +1,6 @@
 {
 	"name"         : "arping",
-	"version"      : "0.1.1",
+	"version"      : "0.2.0",
 	"description"  : "ARP ping using raw sockets",
 	"main"         : "index.js",
 	"keywords"     : [ "arp", "ping" ],
@@ -8,7 +8,7 @@
 	"repository"   : "git@github.com:dresende/node-arping.git",
 	"license"      : "MIT",
 	"dependencies" : {
-			"pcap" : "^2.1.0",
-			"raw-socket": "^1.7.0"
+			"pcap"       : "^2.1.0",
+			"raw-socket" : "^1.7.0"
 	}
 }
